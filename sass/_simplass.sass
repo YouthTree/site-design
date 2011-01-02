@@ -1,0 +1,360 @@
+// simplass - a cutdown version of compass.
+
+
+// compass/_support ***************************************
+
+// Usually compass hacks apply to both ie6 & 7 -- set this to false to disable support for both.
+$legacy-support-for-ie: true !default
+
+// Setting this to false will result in smaller output, but no support for ie6
+$legacy-support-for-ie6: $legacy-support-for-ie !default
+
+// Setting this to false will result in smaller output, but no support for ie7
+$legacy-support-for-ie7: $legacy-support-for-ie !default
+
+// @private
+// The user can simply set $legacy-support-for-ie and 6 & 7 will be set accordingly,
+// But in case the user set either of those explicitly, we need to sync the value of
+// this combined variable.
+$legacy-support-for-ie: $legacy-support-for-ie6 or $legacy-support-for-ie7
+
+// Support for mozilla in experimental css3 properties.
+$experimental-support-for-mozilla   : true !default
+// Support for webkit in experimental css3 properties.
+$experimental-support-for-webkit    : true !default
+// Support for opera in experimental css3 properties.
+$experimental-support-for-opera     : true !default
+// Support for microsoft in experimental css3 properties.
+$experimental-support-for-microsoft : true !default
+// Support for khtml in experimental css3 properties.
+$experimental-support-for-khtml     : true !default
+
+// compass/css3/_shared ***********************************
+
+=experimental($property, $value, $moz:$experimental-support-for-mozilla, $webkit:$experimental-support-for-webkit, $o:$experimental-support-for-opera, $ms:$experimental-support-for-microsoft, $khtml:$experimental-support-for-khtml,$official:true) 
+  @if $moz and $experimental-support-for-mozilla
+    -moz-#{$property}: $value
+  @if $webkit and $experimental-support-for-webkit
+    -webkit-#{$property}: $value
+  @if $o and $experimental-support-for-opera 
+    -o-#{$property}: $value
+  @if $ms and $experimental-support-for-microsoft
+    -ms-#{$property}: $value
+  @if $khtml and $experimental-support-for-khtml
+    -khtml-#{$property}: $value
+  @if $official
+    #{$property}: $value
+
+// Same as experimental(), but for cases when the property is the same and the value is vendorized
+=experimental-value($property, $value, $moz:$experimental-support-for-mozilla, $webkit:$experimental-support-for-webkit, $o:$experimental-support-for-opera, $ms:$experimental-support-for-microsoft, $khtml:$experimental-support-for-khtml, $official:true)
+  @if $moz and $experimental-support-for-mozilla
+    #{$property}: -moz-#{$value}
+  @if $webkit  and $experimental-support-for-webkit
+    #{$property}: -webkit-#{$value}
+  @if $o and $experimental-support-for-opera
+    #{$property}: -o-#{$value}
+  @if $ms and $experimental-support-for-microsoft
+    #{$property}: -ms-#{$value}
+  @if $khtml and $experimental-support-for-khtml
+    #{$property}: -khtml-#{$value}
+  @if $official
+    #{$property}: #{$value}
+
+// compass/css3/_hacks ***********************************
+
+$default-has-layout-approach: zoom !default
+
+// This mixin causes an element matching the selector
+// to gain the "hasLayout" property in internet explorer.
+// More information on [hasLayout](http://reference.sitepoint.com/css/haslayout).
+=has-layout($using: $default-has-layout-approach)
+  @if $legacy-support-for-ie
+    @if $using == zoom
+      +has-layout-zoom
+    @else if $using == block
+      +has-layout-block
+    @else
+      @warn "Unknown has-layout approach: #{$using}"
+      +has-layout-zoom
+
+=has-layout-zoom
+  @if $legacy-support-for-ie
+    *zoom: 1
+
+=has-layout-block
+  @if $legacy-support-for-ie
+    // This makes ie6 get layout
+    display: inline-block
+    // and this puts it back to block
+    &
+      display: block
+
+// A hack to supply IE6 (and below) with a different property value.
+// [Read more](http://www.cssportal.com/css-hacks/#in_css-important).
+=bang-hack($property, $value, $ie6-value)
+  @if $legacy-support-for-ie6
+    #{$property}: #{$value} !important
+    #{$property}: #{$ie6-value}
+
+
+// compass/css3/_border-radius ***********************************
+
+=border-radius($radius: $default-border-radius, $vertical-radius: false)
+  @if $vertical-radius
+    // Webkit doesn't understand the official shorthand syntax for specifying
+    // a vertical radius unless so in case there's several we only take the first.
+    +experimental(border-radius, first-value-of($radius) first-value-of($vertical-radius), not -moz, -webkit, not -o, not -ms, not -khtml, not official)
+    +experimental("border-radius", $radius unquote("/") $vertical-radius, -moz, not -webkit, -o, -ms, -khtml, official)
+  @else
+    +experimental(border-radius, $radius)
+    
+=border-corner-radius($vert, $horz, $radius: $default-border-radius)
+  // Support for mozilla's syntax for specifying a corner
+  +experimental(unquote("border-radius-#{$vert}#{$horz}"), $radius, -moz, not -webkit, not -o, not -ms, not -khtml, not official)
+  +experimental("border-#{$vert}-#{$horz}-radius", $radius, not -moz, -webkit, -o, -ms, -khtml, official)
+    
+=border-bottom-left-radius($radius: $default-border-radius)
+  +border-corner-radius(bottom, left, $radius)
+    
+=border-bottom-right-radius($radius: $default-border-radius)
+  +border-corner-radius(bottom, right, $radius)
+    
+=border-bottom-radius($radius: $default-border-radius)
+  +border-bottom-left-radius($radius)
+  +border-bottom-right-radius($radius)
+
+// Round radius at position by amount.
+//
+// * legal values for `$vert`: `top`, `bottom`
+// * legal values for `$horz`: `left`, `right`
+
+=border-corner-radius($vert, $horz, $radius: $default-border-radius)
+  // Support for mozilla's syntax for specifying a corner
+  +experimental("border-radius-#{$vert}#{$horz}", $radius, -moz, not -webkit, not -o, not -ms, not -khtml, not official)
+  +experimental("border-#{$vert}-#{$horz}-radius", $radius, not -moz, -webkit, -o, -ms, -khtml, official)
+
+// Round top-left corner only
+=border-top-left-radius($radius: $default-border-radius)
+  +border-corner-radius(top, left, $radius)
+
+// Round top-right corner only
+=border-top-right-radius($radius: $default-border-radius)
+  +border-corner-radius(top, right, $radius)
+
+// Round bottom-left corner only
+=border-bottom-left-radius($radius: $default-border-radius)
+  +border-corner-radius(bottom, left, $radius)
+
+// Round bottom-right corner only
+=border-bottom-right-radius($radius: $default-border-radius)
+  +border-corner-radius(bottom, right, $radius)
+
+// Round both top corners by amount
+=border-top-radius($radius: $default-border-radius)
+  +border-top-left-radius($radius)
+  +border-top-right-radius($radius)
+
+// Round both right corners by amount
+=border-right-radius($radius: $default-border-radius)
+  +border-top-right-radius($radius)
+  +border-bottom-right-radius($radius)
+
+// Round both bottom corners by amount
+=border-bottom-radius($radius: $default-border-radius)
+  +border-bottom-left-radius($radius)
+  +border-bottom-right-radius($radius)
+
+// Round both left corners by amount
+=border-left-radius($radius: $default-border-radius)
+  +border-top-left-radius($radius)
+  +border-bottom-left-radius($radius)
+  
+// The default color for box shadows
+$default-box-shadow-color: #333333 !default
+
+// The default horizontal offset. Positive is to the right.
+$default-box-shadow-h-offset: 1px !default
+
+// The default vertical offset. Positive is down.
+$default-box-shadow-v-offset: 1px !default
+
+// The default blur length.
+$default-box-shadow-blur: 5px !default
+
+// The default spread length.
+$default-box-shadow-spread : false !default
+
+// The default shadow instet: inset or false (for standard shadow).
+$default-box-shadow-inset : false !default
+
+// Provides cross-browser CSS box shadows for Webkit, Gecko, and CSS3.
+// Arguments are color, horizontal offset, vertical offset, blur length, spread length, and inset.
+
+// compass/css3/_box-shadow ***********************************
+
+=box-shadow($color: $default-box-shadow-color, $hoff: $default-box-shadow-h-offset, $voff: $default-box-shadow-v-offset, $blur: $default-box-shadow-blur, $spread: $default-box-shadow-spread, $inset: $default-box-shadow-inset)
+  $full: $color $hoff $voff $blur $spread
+  @if $inset
+    @if not ($inset == true or $inset == inset)
+      @warn "$inset expected to be true or the inset keyword. Got #{$inset} instead. The box shadow will be inset."
+    $full: $full inset
+  @if $color == none
+    +experimental(box-shadow, none, -moz, -webkit, -o, not -ms, not -khtml, official)
+  @else
+    +experimental(box-shadow, $full, -moz, -webkit, -o, not -ms, not -khtml, official)
+
+// compass/css3/_gradient ***********************************
+
+=linear-gradient($color-stops, $start: top, $image: false)
+  // Firefox's gradient api is nice.
+  // Webkit's gradient api sucks -- hence these backflips:
+  $background: unquote("")
+  @if $image
+    $background : $image + unquote(", ")
+  $start: unquote($start)
+  $end: opposite-position($start)
+  @if $experimental-support-for-webkit
+    background-image: #{$background}-webkit-gradient(linear, grad-point($start), grad-point($end), grad-color-stops($color-stops))
+  @if $experimental-support-for-mozilla
+    background-image: #{$background}-moz-linear-gradient($start, $color-stops)
+  background-image: #{$background}linear-gradient($start, $color-stops)
+
+// Due to limitation's of webkit, the radial gradient mixin works best if you use
+// pixel-based color stops.
+//
+// Examples:
+//
+//     // Defaults to a centered, 100px radius gradient
+//     +radial-gradient(color-stops(#c00, #00c))
+//     // 100px radius gradient in the top left corner
+//     +radial-gradient(color-stops(#c00, #00c), top left)
+//     // Three colors, ending at 50px and passing thru #fff at 25px
+//     +radial-gradient(color-stops(#c00, #fff, #00c 50px))
+//     // a background image on top of the gradient
+//     // Requires an image with an alpha-layer.
+//     +radial-gradient(color_stops(#c00, #fff), top left, image-url("noise.png")))
+// Browsers Supported:
+//
+// - Chrome
+// - Safari
+// - Firefox 3.6
+
+=radial-gradient($color-stops, $center-position: center center, $image: false)
+  $center-position: unquote($center-position)
+  $end-pos: grad-end-position($color-stops, true)
+  $background: unquote("")
+  @if $image
+    $background: $image + unquote(", ")
+  @if $experimental-support-for-webkit
+    background-image: #{$background}-webkit-gradient(radial, grad-point($center-position), 0, grad-point($center-position), $end-pos, grad-color-stops($color-stops))
+  @if $experimental-support-for-mozilla
+    background-image: #{$background}-moz-radial-gradient($center-position, circle, $color-stops)
+  background-image: #{$background}radial-gradient($center-position, circle, $color-stops)
+
+// compass/utilities/general/_clearfix ***********************************
+    
+=clearfix
+  overflow: hidden
+  +has-layout
+// This older method from Position Is Everything called
+// [Easy Clearing](http://www.positioniseverything.net/easyclearing.html)
+// has the advantage of allowing positioned elements to hang
+// outside the bounds of the container at the expense of more tricky CSS.
+=pie-clearfix
+  &:after
+    content    : "\0020"
+    display    : block
+    height     : 0
+    clear      : both
+    overflow   : hidden
+    visibility : hidden
+  +has-layout
+  
+// compass/utilities/links/_link-colors ***********************************
+
+=link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false)
+  color: $normal
+  @if $visited
+    &:visited
+      color: $visited
+  @if $focus
+    &:focus
+      color: $focus
+  @if $hover
+    &:hover
+      color: $hover
+  @if $active
+    &:active
+      color: $active
+      
+=html5-reset
+  html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video
+    margin: 0
+    padding: 0
+    border: 0
+    outline: 0
+    font-size: 100%
+    vertical-align: baseline
+    background: transparent
+
+  body
+    line-height: 1
+
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+    display: block
+
+  nav ul
+    list-style: none
+
+  blockquote, q
+    quotes: none
+
+  blockquote
+    &:before, &:after
+      content: ''
+      content: none
+
+  q
+    &:before, &:after
+      content: ''
+      content: none
+
+  a
+    margin: 0
+    padding: 0
+    font-size: 100%
+    vertical-align: baseline
+    background: transparent
+  ins
+    background-color: #ff9
+    color: #000
+    text-decoration: none
+
+  mark
+    background-color: #ff9
+    color: #000
+    font-style: italic
+    font-weight: bold
+
+  del
+    text-decoration: line-through
+
+  abbr[title], dfn[title]
+    border-bottom: 1px dotted
+    cursor: help
+
+  table
+    border-collapse: collapse
+    border-spacing: 0
+
+  hr
+    display: block
+    height: 1px
+    border: 0
+    border-top: 1px solid #cccccc
+    margin: 1em 0
+    padding: 0
+
+  input, select
+    vertical-align: middle
+  

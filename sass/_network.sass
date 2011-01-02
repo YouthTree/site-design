@@ -1,0 +1,117 @@
+#yt-network
+  width: 100%
+  background: #000
+  color: #5e5e5e
+
+#yt-network-inner
+  width: 960px
+  margin: 0 auto
+  +clearfix
+  
+  a
+    text-decoration: none
+    +link-colors(#5e5e5e, #999)
+  
+#yt-subscribe
+  float: left
+  a
+    padding: 0 20px
+  &.active
+    background: #1e1e1e
+    +border-bottom-radius(15px)
+    a
+      color: #c4771b
+
+#yt-subscribe, ul#yt-sites
+  font-size: 12px
+  line-height: 18px
+  padding: 10px
+
+ul#yt-sites
+  float: right
+  margin: 0
+  list-style: none
+  
+  li
+    display: inline
+    margin: 0 0 0 20px
+  
+#yt-subscribe-panel
+  display: none
+  background: #1e1e1e
+  form
+    width: 960px
+    margin: 0 auto
+    padding: 15px 0
+    +clearfix
+    font-size: 12px
+  
+  fieldset
+    +clearfix
+    
+    label
+      color: #FFF
+      padding: 5px 10px 5px 0
+      clear: both
+      float: left
+      display: block
+  
+  fieldset#yt-subscriber-details
+    float: left
+    margin-right: 10px
+    width: 220px
+    label
+      width: 50px
+      padding-top: 10px
+    input
+      float: left
+      background: #666666
+      padding: 5px
+      border: 0
+      display: block
+      color: #FFF
+      width: 150px
+      margin-bottom: 10px
+      
+  
+  fieldset#yt-subscriber-subscriptions
+    float: left
+    width: 520px
+    margin: 0 10px
+    label
+      width: 130px
+  
+  fieldset#yt-subscribe-button
+    float: right
+    width: 170px
+    margin-left: 20px
+    padding-top: 15px
+    text-align: left
+    
+    button
+      padding: 10px 30px
+      background: #c86e05
+      font-size: 16px
+      border: 2px solid #AD5F06
+      color: #FFF
+      +border-radius(8px)
+      text-shadow: #000 1px 1px 2px
+      +box-shadow(#000, 1px, 1px, 5px)
+  
+  
+  ul#yt-newsletter-choices
+    float: left
+    display: block
+    width: 380px
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      display: block
+      label
+        width: auto
+        span.yt-list-name
+          color: #FFF
+        span.yt-list-description
+          padding-left: 5px
+          color: #6a6a6a
