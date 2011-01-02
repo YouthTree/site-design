@@ -202,6 +202,13 @@ body {
   background: #cccccc url("/images/background.jpg") center center repeat;
   font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif; }
 
+@font-face {
+  font-family: "LeagueGothicRegular";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/fonts/League_Gothic-webfont.eot");
+  src: local("☺"), url("/fonts/League_Gothic-webfont.woff") format("woff"), url("/fonts/League_Gothic-webfont.ttf") format("truetype"), url("/fonts/League_Gothic-webfont.svg#webfont1Lb5Pdit") format("svg"); }
+
 #container {
   width: 960px;
   margin: 1em auto; }
@@ -224,25 +231,57 @@ body {
       height: 160px;
       text-indent: -10000px;
       background: url("/images/logo.png"); }
-  #page-header nav#site-navigation {
-    float: right; }
-    #page-header nav#site-navigation a {
-      text-decoration: none; }
-    #page-header nav#site-navigation ul {
-      font-size: 1.2em;
-      list-style: none;
-      text-transform: uppercase;
-      margin: 0.75em 0 0 0; }
-      #page-header nav#site-navigation ul li {
-        display: inline;
-        font-weight: bold;
-        margin: 0 0 0 1em; }
-        #page-header nav#site-navigation ul li ul {
-          display: none; }
+
+#site-navigation, #site-navigation ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+#site-navigation {
+  overflow: hidden;
+  *zoom: 1;
+  padding-top: 3em; }
+  #site-navigation ul {
+    font-size: 2.5em; }
+  #site-navigation a {
+    display: block;
+    font-weight: bold;
+    font-style: normal;
+    font-family: "LeagueGothicRegular";
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    padding: 0.25em 0.5em;
+    text-shadow: white 1px 1px 1px; }
+  #site-navigation li {
+    float: right;
+    cursor: pointer; }
+    #site-navigation li ul {
+      font-size: 0.75em;
+      position: absolute;
+      left: -999em;
+      background: #ce8d22; }
+      #site-navigation li ul li {
+        float: none; }
+    #site-navigation li:hover, #site-navigation li.sfhover {
+      cursor: pointer; }
+      #site-navigation li:hover a, #site-navigation li.sfhover a {
+        background: #ce8d22;
+        color: white;
+        text-shadow: black 1px 1px 1px; }
+      #site-navigation li:hover ul, #site-navigation li.sfhover ul {
+        left: auto; }
+        #site-navigation li:hover ul li:hover a, #site-navigation li:hover ul li.sfhover a, #site-navigation li.sfhover ul li:hover a, #site-navigation li.sfhover ul li.sfhover a {
+          background: #614210; }
 
 #content {
   padding: 20px;
   background: #e9eff4; }
+  #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+    font-weight: bold;
+    font-style: normal;
+    font-family: "LeagueGothicRegular";
+    text-transform: uppercase; }
 
 .subsection-container {
   overflow: hidden;
@@ -257,7 +296,7 @@ body {
   .subsection:last-child {
     margin-right: 0; }
   .subsection h3 {
-    font-size: 1.25em;
+    font-size: 1.5em;
     margin-bottom: 10px; }
   .subsection p {
     line-height: 1.5em;
@@ -328,14 +367,13 @@ h2#mission-statement {
   padding: 0.75em 0;
   border-bottom: 1px dotted #777777;
   font-weight: bold;
-  font-size: 1.4em;
-  margin: 0 0 1em;
-  letter-spacing: -0.1em; }
+  font-size: 2em;
+  margin: 0 0 1em; }
 
 #page-footer {
   overflow: hidden;
   *zoom: 1;
-  padding: 0.75em 1em;
+  padding: 0.75em 2em;
   background: #2a2b2c url("/images/footer.jpg") center center repeat-x;
   color: #929292; }
   #page-footer a {
@@ -349,13 +387,15 @@ h2#mission-statement {
     line-height: 1.5em; }
   #page-footer ul#supporter-information {
     float: right;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.8em;
-    margin: 1em 0 0;
+    font-size: 1.2em;
+    margin: 0.5em 0 0;
     padding: 0;
     list-style: none;
-    letter-spacing: -0.1em; }
+    font-weight: bold;
+    font-style: normal;
+    font-family: "LeagueGothicRegular";
+    text-transform: uppercase;
+    text-shadow: black 1px 1px 2px; }
     #page-footer ul#supporter-information li {
       display: inline;
       margin-left: 1em; }

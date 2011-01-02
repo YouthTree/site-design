@@ -286,6 +286,17 @@ $default-box-shadow-inset : false !default
   @if $active
     &:active
       color: $active
+
+$font-prefix: "/fonts/"
+$font-suffix: "-webfont"
+=font-face($name, $filename, $svg-key: "", $weight: 'normal', $style: 'normal')
+  $font-path: $font-prefix + $filename + $font-suffix
+  @font-face
+    font-family: quote($name)
+    font-weight: unquote($weight)
+    font-style: unquote($style)
+    src: url($font-path + ".eot")
+    src: local("☺"), url($font-path + '.woff') format('woff'), url($font-path + '.ttf') format('truetype'), url($font-path + '.svg' + $svg-key) format('svg')
       
 =html5-reset
   html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video

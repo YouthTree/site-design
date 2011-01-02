@@ -1,22 +1,35 @@
+:javascript
+
+  $(document).ready(function() {
+    $('#site-navigation ul li').hover(function() {
+      $(this).addClass('sfhover');
+    }, function() {
+      $(this).removeClass('sfhover');
+    });
+  });
+
 %h1
   %a{:href => "/"} Youth Tree
   
 %nav#site-navigation
   %ul
     %li
-      %a{:href => "#"} About
-      %ul.nested
-        %li
-          %a{:href => "#"} What We Do
-        %li
-          %a{:href => "#"} Mission And Vision
-        %li
-          %a{:href => "#"} People
-        %li
-          %a{:href => "#"} History
-    %li
-      %a{:href => "#"} Get Involved
+      %a{:href => "#"} Contact Us
     %li
       %a{:href => "#"} Partners
+      %ul
+        = ml "ZettaGrid"
+        = ml "Caimes Web"
+        = ml "The Frontier Group"
     %li
-      %a{:href => "#"} Contact Us
+      %a{:href => "#"} Get Involved
+      %ul
+        = ml "Sign up for a Position"
+        = ml "Be Awesome"
+    %li
+      %a{:href => "#"} About
+      %ul
+        = ml "What We Do"
+        = ml "Mission And Vision"
+        = ml "People"
+        = ml "History"
