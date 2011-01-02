@@ -207,11 +207,11 @@ body {
   font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif; }
 
 @font-face {
-  font-family: "LeagueGothicRegular";
+  font-family: "IngomarJNLRegular";
   font-weight: bold;
   font-style: normal;
-  src: url("/fonts/League_Gothic-webfont.eot");
-  src: local("☺"), url("/fonts/League_Gothic-webfont.woff") format("woff"), url("/fonts/League_Gothic-webfont.ttf") format("truetype"), url("/fonts/League_Gothic-webfont.svg#webfont1Lb5Pdit") format("svg"); }
+  src: url("/fonts/ingomar-webfont.eot");
+  src: local("☺"), url("/fonts/ingomar-webfont.woff") format("woff"), url("/fonts/ingomar-webfont.ttf") format("truetype"), url("/fonts/ingomar-webfont.svg#webfont") format("svg"); }
 
 #container {
   width: 960px;
@@ -245,14 +245,16 @@ body {
 #site-navigation {
   overflow: hidden;
   *zoom: 1;
-  padding-top: 4.5em; }
+  padding-top: 4.5em;
+  z-index: 50; }
   #site-navigation ul {
-    font-size: 2.5em; }
+    font-size: 2.5em;
+    z-index: 50; }
   #site-navigation a {
     display: block;
     font-weight: bold;
     font-style: normal;
-    font-family: "LeagueGothicRegular";
+    font-family: "IngomarJNLRegular";
     text-transform: uppercase;
     color: black;
     text-decoration: none;
@@ -288,7 +290,7 @@ body {
 #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
   font-weight: bold;
   font-style: normal;
-  font-family: "LeagueGothicRegular";
+  font-family: "IngomarJNLRegular";
   text-transform: uppercase;
   border-bottom: 1px dotted #777777;
   padding: 5px;
@@ -328,13 +330,13 @@ body {
   #content pre p {
     margin: 0;
     padding: 0; }
-#content #image-container {
+#content .image-container {
   text-align: center;
   padding: 24px 0; }
-  #content #image-container img {
+  #content .image-container img {
     background: white;
     border: 0.25em solid #d2d8dd; }
-  #content #image-container p {
+  #content .image-container p {
     color: #555555;
     font-size: 0.8em;
     margin: 0;
@@ -360,7 +362,7 @@ body {
   #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
     font-weight: bold;
     font-style: normal;
-    font-family: "LeagueGothicRegular";
+    font-family: "IngomarJNLRegular";
     text-transform: uppercase; }
   #content .subsection-container {
     overflow: hidden;
@@ -394,7 +396,24 @@ body {
   background: white;
   border: 1px dotted #777777;
   padding: 10px;
-  text-align: center; }
+  text-align: center;
+  z-index: 5; }
+  #carousel ul {
+    display: block;
+    width: 895px;
+    height: 350px;
+    margin: 0 auto;
+    list-style: none;
+    position: relative; }
+    #carousel ul li {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      width: 895px;
+      height: 350px;
+      display: none; }
+      #carousel ul li:first-child {
+        display: block; }
 
 ul#social-media-icons {
   overflow: hidden;
@@ -445,13 +464,13 @@ h2#mission-statement {
   padding: 0.75em 0;
   border-bottom: 1px dotted #777777;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.8em;
   margin: 0 0 1em; }
 
 #page-footer {
   overflow: hidden;
   *zoom: 1;
-  padding: 0.75em 2em;
+  padding: 0.75em 1em;
   background: #2a2b2c url("/images/footer.jpg") center center repeat-x;
   color: #929292; }
   #page-footer a {
@@ -471,9 +490,9 @@ h2#mission-statement {
     list-style: none;
     font-weight: bold;
     font-style: normal;
-    font-family: "LeagueGothicRegular";
+    font-family: "IngomarJNLRegular";
     text-transform: uppercase;
     text-shadow: black 1px 1px 2px; }
     #page-footer ul#supporter-information li {
       display: inline;
-      margin-left: 1em; }
+      margin-left: 0.5em; }

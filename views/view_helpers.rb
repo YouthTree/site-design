@@ -26,4 +26,8 @@ module ViewHelpers
     content_tag :li, content_tag(:a, text, :title => text, :id => "#{type}-link", :href => '#')
   end
   
+  def carousel_image(offset)
+    content_tag :li, tag(:img, :src => "/images/banners/carousel-image-#{offset}.jpg")
+  end
+  
 end

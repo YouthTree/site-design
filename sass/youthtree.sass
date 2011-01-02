@@ -8,12 +8,12 @@ body
   background: #ccc url('/images/background.jpg') center center repeat
   font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif
 
-+font-face('LeagueGothicRegular', 'League_Gothic', '#webfont1Lb5Pdit', 'bold')
++font-face('IngomarJNLRegular', 'ingomar', '#webfont', 'bold')
 
 =condensed-font
   font-weight: bold
   font-style: normal
-  font-family: 'LeagueGothicRegular'
+  font-family: 'IngomarJNLRegular'
   text-transform: uppercase
 
 #container
@@ -43,9 +43,11 @@ $menu-bg-colour: #ce8d22
 #site-navigation
   +clearfix
   padding-top: 4.5em
+  z-index: 50
 
   ul
     font-size: 2.5em
+    z-index: 50
 
   a
     display: block
@@ -135,7 +137,7 @@ $menu-bg-colour: #ce8d22
       margin: 0
       padding: 0
       
-  #image-container
+  .image-container
     text-align: center
     padding: 24px 0
     img
@@ -209,6 +211,24 @@ $menu-bg-colour: #ce8d22
   border: 1px dotted #777
   padding: 10px
   text-align: center
+  z-index: 5
+  
+  ul
+    display: block
+    width: 895px
+    height: 350px
+    margin: 0 auto
+    list-style: none
+    position: relative
+    li
+      position: absolute
+      margin: 0
+      padding: 0
+      width: 895px
+      height: 350px
+      display: none
+      &:first-child
+        display: block
   
 ul#social-media-icons
   +clearfix
@@ -251,12 +271,12 @@ h2#mission-statement
   padding: 0.75em 0
   border-bottom: 1px dotted #777
   font-weight: bold
-  font-size: 2em
+  font-size: 1.8em
   margin: 0 0 1em
 
 #page-footer
   +clearfix
-  padding: 0.75em 2em
+  padding: 0.75em 1em
   background: #2a2b2c url('/images/footer.jpg') center center repeat-x
   color: #929292
   
@@ -279,4 +299,4 @@ h2#mission-statement
     text-shadow: #000 1px 1px 2px
     li
       display: inline
-      margin-left: 1em
+      margin-left: 0.5em

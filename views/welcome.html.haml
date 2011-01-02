@@ -1,5 +1,7 @@
 #carousel
-  %img{:src => "/images/samples/example-c.jpg", :alt => "First Item"}
+  %ul
+    - ('a'..'n').each do |c|
+      = carousel_image c
 
 %h2#mission-statement
   We can see a world where doing good is as mainstream as Cheeseburgers and Breathing.
