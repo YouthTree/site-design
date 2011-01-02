@@ -142,7 +142,7 @@ ul#yt-sites {
     width: 220px; }
     #yt-subscribe-panel fieldset#yt-subscriber-details label {
       width: 50px;
-      padding-top: 10px; }
+      padding-top: 8px; }
     #yt-subscribe-panel fieldset#yt-subscriber-details input {
       float: left;
       background: #666666;
@@ -166,7 +166,7 @@ ul#yt-sites {
     text-align: left; }
     #yt-subscribe-panel fieldset#yt-subscribe-button button {
       padding: 10px 30px;
-      background: #c86e05;
+      background: #c86e05 url("/images/bg-gradient.png") bottom center repeat-x;
       font-size: 16px;
       border: 2px solid #ad5f06;
       color: white;
@@ -177,10 +177,14 @@ ul#yt-sites {
       -khtml-border-radius: 8px;
       border-radius: 8px;
       text-shadow: black 1px 1px 2px;
+      font-weight: bold;
       -moz-box-shadow: black 1px 1px 5px false;
       -webkit-box-shadow: black 1px 1px 5px false;
       -o-box-shadow: black 1px 1px 5px false;
       box-shadow: black 1px 1px 5px false; }
+      #yt-subscribe-panel fieldset#yt-subscribe-button button:hover {
+        cursor: pointer;
+        background-color: #af6004; }
   #yt-subscribe-panel ul#yt-newsletter-choices {
     float: left;
     display: block;
@@ -227,10 +231,11 @@ body {
     float: left; }
     #page-header h1 a {
       display: block;
-      width: 180px;
-      height: 160px;
+      margin: 0 0 0 1.25em;
+      width: 150px;
+      height: 150px;
       text-indent: -10000px;
-      background: url("/images/logo.png"); }
+      background: url("/images/logo.png") center center no-repeat; }
 
 #site-navigation, #site-navigation ul {
   padding: 0;
@@ -274,6 +279,81 @@ body {
         #site-navigation li:hover ul li:hover a, #site-navigation li:hover ul li.sfhover a, #site-navigation li.sfhover ul li:hover a, #site-navigation li.sfhover ul li.sfhover a {
           background: #614210; }
 
+#content a {
+  color: #36527e; }
+  #content a:hover {
+    color: #a26f1b; }
+  #content a:active {
+    color: #777777; }
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+  font-weight: bold;
+  font-style: normal;
+  font-family: "LeagueGothicRegular";
+  text-transform: uppercase;
+  border-bottom: 1px dotted #777777;
+  padding: 5px;
+  margin-bottom: 14px;
+  color: #ce8d22; }
+#content h1 {
+  font-size: 2em; }
+#content h2 {
+  font-size: 1.5em; }
+#content h3 {
+  font-size: 1.25em; }
+#content h4 {
+  font-size: 1.2em; }
+#content h5 {
+  font-size: 1.1em; }
+#content h6 {
+  font-size: 1em; }
+#content p {
+  line-height: 1.35em;
+  font-size: 0.9em;
+  margin-bottom: 14px;
+  overflow: hidden;
+  *zoom: 1; }
+#content p img {
+  float: left;
+  margin: 0 10px 10px 0; }
+#content blockquote {
+  font-size: 1.2em;
+  color: black;
+  padding: 1em;
+  margin: 0 0 14px;
+  line-height: 1.5em; }
+#content pre {
+  color: #444444;
+  margin: 0 0 14px;
+  padding: 1em; }
+  #content pre p {
+    margin: 0;
+    padding: 0; }
+#content #image-container {
+  text-align: center;
+  padding: 24px 0; }
+  #content #image-container img {
+    background: white;
+    border: 0.25em solid #d2d8dd; }
+  #content #image-container p {
+    color: #555555;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 1em 0; }
+#content ul, #content ol, #content dl {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  margin: 0 0 14px; }
+#content ul, #content ol {
+  list-style-position: inside; }
+#content dl dt {
+  font-weight: bold;
+  margin-top: 8px;
+  color: #111111; }
+#content dl dd {
+  color: #444444; }
+#content img a {
+  border: none; }
+
 #content {
   padding: 20px;
   background: #e9eff4; }
@@ -316,7 +396,8 @@ ul.section-links {
 #carousel {
   background: white;
   border: 1px dotted #777777;
-  padding: 10px; }
+  padding: 10px;
+  text-align: center; }
 
 ul#social-media-icons {
   overflow: hidden;

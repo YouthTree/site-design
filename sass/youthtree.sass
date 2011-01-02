@@ -27,10 +27,11 @@ body
     float: left
     a
       display: block
-      width: 180px
-      height: 160px
+      margin: 0 0 0 1.25em
+      width: 150px
+      height: 150px
       text-indent: -10000px
-      background: url('/images/logo.png')
+      background: url('/images/logo.png') center center no-repeat
     
 #site-navigation, #site-navigation ul
   padding: 0
@@ -79,6 +80,93 @@ $menu-bg-colour: #ce8d22
             background: darken($menu-bg-colour, 25%)
 
 #content
+
+  a
+    +link-colors(#36527E, darken($menu-bg-colour, 10%), #777)
+
+  h1, h2, h3, h4, h5, h6
+    +condensed-font
+    border-bottom: 1px dotted #777
+    padding: 5px
+    margin-bottom: 14px
+    color: $menu-bg-colour
+    
+  h1
+    font-size: 2em
+  
+  h2
+    font-size: 1.5em
+  
+  h3
+    font-size: 1.25em
+  
+  h4
+    font-size: 1.2em
+  
+  h5
+    font-size: 1.1em
+  
+  h6
+    font-size: 1em
+    
+  p
+    line-height: 1.35em
+    font-size: 0.9em
+    margin-bottom: 14px
+    +clearfix
+  
+  p img
+    float: left
+    margin: 0 10px 10px 0
+    
+  blockquote
+    font-size: 1.2em
+    color: #000
+    padding: 1em
+    margin: 0 0 14px
+    line-height: 1.5em
+  
+  pre
+    color: #444
+    margin: 0 0 14px
+    padding: 1em
+    
+    p
+      margin: 0
+      padding: 0
+      
+  #image-container
+    text-align: center
+    padding: 24px 0
+    img
+      background: white
+      border: 0.25em solid #D2D8DD
+    p
+      color: #555
+      font-size: 0.8em
+      margin: 0
+      padding: 1em 0
+  
+  ul, ol, dl
+    font-size: 0.9em
+    line-height: 1.5em
+    margin: 0 0 14px
+    
+  ul, ol
+    list-style-position: inside
+    
+  dl
+    dt
+      font-weight: bold
+      margin-top: 8px
+      color: #111
+    dd
+      color: #444
+      
+  img a
+    border: none
+
+#content
   padding: 20px
   background: #e9eff4
   h1, h2, h3, h4, h5, h6
@@ -120,6 +208,7 @@ ul.section-links
   background: white
   border: 1px dotted #777
   padding: 10px
+  text-align: center
   
 ul#social-media-icons
   +clearfix

@@ -1,16 +1,3 @@
-:javascript
-  $(document).ready(function() {
-    $("#yt-subscribe").toggle(function(e) {
-      e.preventDefault();
-      $(this).addClass('active');
-      $('#yt-subscribe-panel').slideDown();
-    }, function(e) {
-      e.preventDefault();
-      $(this).removeClass('active');
-      $('#yt-subscribe-panel').slideUp();
-    })
-  })
-
 #yt-network
   
   #yt-subscribe-panel
@@ -53,6 +40,6 @@
   
     %ul#yt-sites
       %li
-        %a{:href => "#"} Big Help Mob &raquo;
+        %a{:href => "http://bighelpmob.org/", :title => "", :target => '_blank'} Big Help Mob &raquo;
       %li
-        %a{:href => "#"} TEDxPerth &raquo;
+        %a{:href => "http://tedxperth.org/", :title => "", :target => '_blank'} TEDxPerth &raquo;

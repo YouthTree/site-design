@@ -62,7 +62,7 @@ ul#yt-sites
     width: 220px
     label
       width: 50px
-      padding-top: 10px
+      padding-top: 8px
     input
       float: left
       background: #666666
@@ -90,13 +90,18 @@ ul#yt-sites
     
     button
       padding: 10px 30px
-      background: #c86e05
+      background: #c86e05 url('/images/bg-gradient.png') bottom center repeat-x
       font-size: 16px
       border: 2px solid #AD5F06
       color: #FFF
       +border-radius(8px)
       text-shadow: #000 1px 1px 2px
+      font-weight: bold
       +box-shadow(#000, 1px, 1px, 5px)
+      
+      &:hover
+        cursor: pointer
+        background-color: darken(#c86e05, 5%)
   
   
   ul#yt-newsletter-choices
