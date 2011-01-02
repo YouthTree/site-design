@@ -1,13 +1,14 @@
 #\ -p 4000
 
-gem 'activesupport'
-gem 'serve'
+require 'bundler/setup'
 
 require 'serve'
 require 'serve/rack'
 
 require 'sass/plugin/rack'
 require 'barista'
+
+Bundler.require :default, (ENV['RACK_ENV'] || 'development').to_sym
 
 # The project root directory
 root = ::File.dirname(__FILE__)

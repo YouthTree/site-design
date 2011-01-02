@@ -1,46 +1,20 @@
-What is this?
-=============
+# YouthTree Design
 
-This is a simple HTML prototype written in HAML or ERB that is designed to be
-viewed with Serve.
+This is a definitive repository containing the prototyping-oriented version of the
+YouthTree website. It is powered via Serve and Barista.
 
-What is Serve? Serve is a rapid prototyping framework for Rails applications.
-It is designed to compliment Rails development and enforce a strict separation
-of concerns between designer and developer. Using Serve with Rails allows the
-designer to happily work in his own space creating an HTML prototype of the
-application, while the developer works on the Rails application and copies
-over HTML from the prototype as needed. This allows the designer to focus on
-presentation and flow while the developer can focus on the implementation.
+The design itself is with thanks to Ovidiu Puscas of Caimes Web.
 
+The contents of this repository, where possible, are released under a
+Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+For more information this license, please see [here](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-How do I install and run Serve?
--------------------------------
+League Gothic is used under the SIL Open Font License 1.1 - See `SIL Open Font License 1.1.txt`
+for more information (files under `public/fonts`).
 
-Serve is distributed as a gem to make it easy to get up and running. To
-install, type the following at the command prompt:
+Portions of this application make use of code from [Compass](https://github.com/chriseppstein/compass) and are used under
+[Compass' modified MIT License](https://github.com/chriseppstein/compass/blob/master/LICENSE.markdown).
 
-    gem install serve
-
-(OSX and Unix users may need to prefix the command with `sudo`.)
-
-After Serve is installed, you can start it up in a given directory like this:
-
-    serve
-
-This will start Serve on port 4000. You can now view the prototype in your
-Web browser at this URL:
-
-<http://localhost:4000>
-
-Click around. You will find that Serve enables you to prototype most
-functionality without writing a single line of backend code.
-
-
-Rack and Passenger
-------------------
-
-Astute users may notice that this project is also a simple Rack application.
-This means that it is easy to deploy it on Passenger or rack it up with the
-`rackup` command. For more information about using Serve and Passenger see:
-
-<http://bit.ly/serve-and-passenger>
+The social media mini icons used in this design are used under a 
+[Creative Commons Attribution-Share Alike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/)
+and are available from [Komodo Media](http://www.komodomedia.com/blog/2008/12/social-media-mini-iconpack/).

@@ -20,5 +20,7 @@ pkg
 
 ## PROJECT::SPECIFIC
 *.gem
-.rvmrc
 .bundle
+
+public/javascripts/vendor/shuriken
+public/javascripts/vendor/youthtree
