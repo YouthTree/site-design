@@ -1,0 +1,36 @@
+%h1 Contact Us
+
+%p
+  Vestibulum id libero mauris. Aliquam lobortis dictum auctor. Proin accumsan fringilla volutpat. Aliquam sodales purus erat. Nulla sit amet elit sit amet nulla consequat hendrerit. Vestibulum dui justo, tempor et tincidunt vitae. Cras interdum varius libero, eu pulvinar lacus posuere ultricies Aenean lacinia diam at diam sodales tincidunt sit amet nec velit. Proin pulvinar sodales mauris ac sollicitudin. Pellentesque euismod volutpat nisi, ac bibendum mi molestie et. Nullam ac pharetra dolor. And now something lower... Suspendisse in tristique lectus. 
+  
+%form.formtastic
+
+  %fieldset.inputs
+    %legend
+      %span Your Contact Details
+    %ol
+      %li.string.required
+        %label{:for => "contact_full_name"}
+          Your Full Name:
+          %abbr.required{:title => "This field is required"} (required)
+        %input#contact_full_name{:type => "text", :name => "contact[full_name]"}
+        %p.inline-errors Is not currently filled in.
+      %li.email.required
+        %label{:for => "contact_email_address"}
+          Your Email Address:
+          %abbr.required{:title => "This field is required"} (required)
+        %input#contact_full_name{:type => "email", :name => "contact[email_address]"}
+        %p.inline-hints Make sure you email is present as expected.
+    
+  %fieldset.inputs
+    %legend
+      %span Your Message
+    %ol
+      %li.text.required
+        %label{:for => "contact_message"} Your Message:
+        %textarea#contact_message{:name => "contact[message]", :rows => 3}
+  
+  %fieldset.buttons
+    %ol
+      %li.commit
+        %button.update#position_submit{:type => 'submit'} Contact Us

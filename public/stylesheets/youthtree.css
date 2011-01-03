@@ -67,6 +67,145 @@ hr {
 input, select {
   vertical-align: middle; }
 
+body {
+  background: #cccccc url("/images/background.jpg") center center repeat;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif; }
+
+@font-face {
+  font-family: "IngomarJNLRegular";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/fonts/ingomar-webfont.eot");
+  src: local("☺"), url("/fonts/ingomar-webfont.woff") format("woff"), url("/fonts/ingomar-webfont.ttf") format("truetype"), url("/fonts/ingomar-webfont.svg#webfont") format("svg"); }
+
+form.formtastic {
+  margin: 0;
+  padding: 0; }
+  form.formtastic ul, form.formtastic ol, form.formtastic li, form.formtastic fieldset, form.formtastic legend, form.formtastic input, form.formtastic textarea, form.formtastic select, form.formtastic p {
+    margin: 0;
+    padding: 0; }
+  form.formtastic fieldset {
+    border: 0; }
+  form.formtastic em, form.formtastic strong {
+    font-style: normal;
+    font-weight: normal; }
+  form.formtastic ol, form.formtastic ul {
+    list-style: none; }
+  form.formtastic abbr, form.formtastic acronym {
+    border: 0;
+    font-variant: normal; }
+  form.formtastic input, form.formtastic textarea, form.formtastic select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit; }
+  form.formtastic input, form.formtastic textarea, form.formtastic select {
+    font-size: 100%; }
+  form.formtastic legend {
+    white-space: normal;
+    color: black; }
+  form.formtastic ul.errors {
+    color: #cc0000;
+    margin: 0.5em 0 1.5em 25%;
+    list-style: square; }
+    form.formtastic ul.errors li {
+      padding: 0;
+      border: none;
+      display: list-item; }
+  form.formtastic fieldset {
+    overflow: auto; }
+    form.formtastic fieldset.buttons {
+      padding-left: 25%; }
+    form.formtastic fieldset.buttons li {
+      float: left;
+      padding-right: 0.5em; }
+    form.formtastic fieldset > ol > li {
+      padding: 0.5em 0;
+      margin-top: -0.5em;
+      margin-bottom: 1em;
+      overflow: auto; }
+      form.formtastic fieldset > ol > li label {
+        display: block;
+        width: 25%;
+        float: left;
+        padding-top: 0.2em; }
+      form.formtastic fieldset > ol > li > li label {
+        line-height: 100%;
+        padding-top: 0; }
+        form.formtastic fieldset > ol > li > li label input {
+          line-height: 100%;
+          vertical-align: middle;
+          margin-top: -0.1em; }
+      form.formtastic fieldset > ol > li fieldset {
+        position: relative; }
+        form.formtastic fieldset > ol > li fieldset legend {
+          position: absolute;
+          width: 95%;
+          padding-top: 0.1em;
+          left: 0px; }
+          form.formtastic fieldset > ol > li fieldset legend span, form.formtastic fieldset > ol > li fieldset legend.label label {
+            position: absolute; }
+        form.formtastic fieldset > ol > li fieldset ol {
+          float: left;
+          width: 74%;
+          margin: 0;
+          padding: 0 0 0 25%; }
+          form.formtastic fieldset > ol > li fieldset ol li {
+            padding: 0;
+            border: 0; }
+      form.formtastic fieldset > ol > li p.inline-hints {
+        color: #666666;
+        margin: 0.5em 0 0 25%; }
+      form.formtastic fieldset > ol > li p.inline-errors {
+        color: #cc0000;
+        margin: 0.5em 0 0 25%; }
+      form.formtastic fieldset > ol > li ul.errors {
+        color: #cc0000;
+        margin: 0.5em 0 0 25%;
+        list-style: square; }
+        form.formtastic fieldset > ol > li ul.errors li {
+          padding: 0;
+          border: none;
+          display: list-item; }
+      form.formtastic fieldset > ol > li.string input, form.formtastic fieldset > ol > li.password input, form.formtastic fieldset > ol > li.numeric input, form.formtastic fieldset > ol > li.email input, form.formtastic fieldset > ol > li.url input, form.formtastic fieldset > ol > li.phone input, form.formtastic fieldset > ol > li.search input {
+        width: 72%; }
+      form.formtastic fieldset > ol > li.string input[size], form.formtastic fieldset > ol > li.password input[size], form.formtastic fieldset > ol > li.numeric input[size], form.formtastic fieldset > ol > li.email input[size], form.formtastic fieldset > ol > li.url input[size], form.formtastic fieldset > ol > li.phone input[size], form.formtastic fieldset > ol > li.search input[size], form.formtastic fieldset > ol > li.datetime_picker input[size], form.formtastic fieldset > ol > li.date_picker input[size] {
+        width: auto;
+        max-width: 72%; }
+      form.formtastic fieldset > ol > li.text textarea {
+        width: 72%; }
+        form.formtastic fieldset > ol > li.text textarea[cols] {
+          width: auto;
+          max-width: 72%; }
+    form.formtastic fieldset ol li.hidden {
+      display: none; }
+    form.formtastic fieldset > ol > li.boolean label {
+      padding-left: 25%;
+      width: auto; }
+      form.formtastic fieldset > ol > li.boolean label input {
+        margin: 0 0.5em 0 0.2em; }
+    form.formtastic fieldset > ol > li.radio fieldset, form.formtastic fieldset > ol > li.check_boxes fieldset {
+      overflow: visible; }
+      form.formtastic fieldset > ol > li.radio fieldset ol, form.formtastic fieldset > ol > li.check_boxes fieldset ol {
+        margin-bottom: -0.5em; }
+        form.formtastic fieldset > ol > li.radio fieldset ol li, form.formtastic fieldset > ol > li.check_boxes fieldset ol li {
+          margin: 0.1em 0 0.5em 0;
+          overflow: visible; }
+          form.formtastic fieldset > ol > li.radio fieldset ol li label, form.formtastic fieldset > ol > li.check_boxes fieldset ol li label {
+            float: none;
+            width: 100%; }
+            form.formtastic fieldset > ol > li.radio fieldset ol li label input, form.formtastic fieldset > ol > li.check_boxes fieldset ol li label input {
+              margin-right: 0.2em; }
+    form.formtastic fieldset > ol > li.date fieldset ol li, form.formtastic fieldset > ol > li.time fieldset ol li, form.formtastic fieldset > ol > li.datetime fieldset ol li {
+      float: left;
+      width: auto;
+      margin: 0 0.3em 0 0; }
+    form.formtastic fieldset > ol > li.date fieldset ol li label, form.formtastic fieldset > ol > li.time fieldset ol li label, form.formtastic fieldset > ol > li.datetime fieldset ol li label {
+      display: none; }
+    form.formtastic fieldset > ol > li.date fieldset ol li label input, form.formtastic fieldset > ol > li.time fieldset ol li label input, form.formtastic fieldset > ol > li.datetime fieldset ol li label input {
+      display: inline;
+      margin: 0;
+      padding: 0; }
+
 #yt-network {
   width: 100%;
   background: black;
@@ -202,21 +341,6 @@ ul#yt-sites {
           padding-left: 5px;
           color: #6a6a6a; }
 
-body {
-  background: #cccccc url("/images/background.jpg") center center repeat;
-  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif; }
-
-@font-face {
-  font-family: "IngomarJNLRegular";
-  font-weight: bold;
-  font-style: normal;
-  src: url("/fonts/ingomar-webfont.eot");
-  src: local("☺"), url("/fonts/ingomar-webfont.woff") format("woff"), url("/fonts/ingomar-webfont.ttf") format("truetype"), url("/fonts/ingomar-webfont.svg#webfont") format("svg"); }
-
-#container {
-  width: 960px;
-  margin: 1em auto; }
-
 #page-header {
   *zoom: 1;
   margin: 0 0 0.5em; }
@@ -281,89 +405,87 @@ body {
         #site-navigation li:hover ul li:hover a, #site-navigation li:hover ul li.sfhover a, #site-navigation li.sfhover ul li:hover a, #site-navigation li.sfhover ul li.sfhover a {
           background: #614210; }
 
-#content a {
-  color: #36527e; }
-  #content a:hover {
-    color: #a26f1b; }
-  #content a:active {
-    color: #777777; }
-#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
-  font-weight: bold;
-  font-style: normal;
-  font-family: "IngomarJNLRegular";
-  text-transform: uppercase;
-  border-bottom: 1px dotted #777777;
-  padding: 5px;
-  margin-bottom: 14px;
-  color: #ce8d22; }
-#content h1 {
-  font-size: 2em; }
-#content h2 {
-  font-size: 1.5em; }
-#content h3 {
-  font-size: 1.25em; }
-#content h4 {
-  font-size: 1.2em; }
-#content h5 {
-  font-size: 1.1em; }
-#content h6 {
-  font-size: 1em; }
-#content p {
-  line-height: 1.35em;
-  font-size: 0.9em;
-  margin-bottom: 14px;
-  overflow: hidden;
-  *zoom: 1; }
-#content p img {
-  float: left;
-  margin: 0 10px 10px 0; }
-#content blockquote {
-  font-size: 1.2em;
-  color: black;
-  padding: 1em;
-  margin: 0 0 14px;
-  line-height: 1.5em; }
-#content pre {
-  color: #444444;
-  margin: 0 0 14px;
-  padding: 1em; }
-  #content pre p {
-    margin: 0;
-    padding: 0; }
-#content .image-container {
-  text-align: center;
-  padding: 24px 0; }
-  #content .image-container img {
-    background: white;
-    border: 0.25em solid #d2d8dd; }
-  #content .image-container p {
-    color: #555555;
-    font-size: 0.8em;
-    margin: 0;
-    padding: 1em 0; }
-#content ul, #content ol, #content dl {
-  font-size: 0.9em;
-  line-height: 1.5em;
-  margin: 0 0 14px; }
-#content ul, #content ol {
-  list-style-position: inside; }
-#content dl dt {
-  font-weight: bold;
-  margin-top: 8px;
-  color: #111111; }
-#content dl dd {
-  color: #444444; }
-#content img a {
-  border: none; }
+#container {
+  width: 960px;
+  margin: 1em auto; }
 
 #content {
   padding: 20px;
   background: #e9eff4; }
+  #content a {
+    color: #36527e; }
+    #content a:hover {
+      color: #a26f1b; }
+    #content a:active {
+      color: #777777; }
   #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
     font-weight: bold;
     font-style: normal;
     font-family: "IngomarJNLRegular";
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    border-bottom: 1px dotted #777777;
+    padding: 5px;
+    margin-bottom: 14px;
+    color: #ce8d22; }
+  #content h1 {
+    font-size: 2em; }
+  #content h2 {
+    font-size: 1.5em; }
+  #content h3 {
+    font-size: 1.25em; }
+  #content h4 {
+    font-size: 1.2em; }
+  #content h5 {
+    font-size: 1.1em; }
+  #content h6 {
+    font-size: 1em; }
+  #content p {
+    line-height: 1.35em;
+    font-size: 0.9em;
+    margin-bottom: 14px;
+    overflow: hidden;
+    *zoom: 1; }
+  #content p img {
+    float: left;
+    margin: 0 10px 10px 0; }
+  #content blockquote {
+    font-size: 1.2em;
+    color: black;
+    padding: 1em;
+    margin: 0 0 14px;
+    line-height: 1.5em; }
+  #content pre {
+    color: #444444;
+    margin: 0 0 14px;
+    padding: 1em; }
+    #content pre p {
+      margin: 0;
+      padding: 0; }
+  #content .image-container {
+    text-align: center;
+    padding: 24px 0; }
+    #content .image-container img {
+      background: white;
+      border: 0.25em solid #d2d8dd; }
+    #content .image-container p {
+      color: #555555;
+      font-size: 0.8em;
+      margin: 0;
+      padding: 1em 0; }
+  #content ul, #content ol, #content dl {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin: 0 0 14px; }
+  #content ul, #content ol {
+    list-style-position: inside; }
+  #content dl dt {
+    font-weight: bold;
+    margin-top: 8px;
+    color: #111111; }
+  #content dl dd {
+    color: #444444; }
+  #content img a {
+    border: none; }
   #content .subsection-container {
     overflow: hidden;
     *zoom: 1; }
@@ -391,6 +513,36 @@ body {
       text-decoration: none; }
       #content ul.section-links a:hover {
         color: #111111; }
+
+#page-footer {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 0.75em 1em;
+  background: #2a2b2c url("/images/footer.jpg") center center repeat-x;
+  color: #929292; }
+  #page-footer a {
+    color: #929292;
+    text-decoration: underline; }
+    #page-footer a:hover {
+      color: white; }
+  #page-footer p#copyright-information {
+    float: left;
+    font-size: 0.8em;
+    line-height: 1.5em; }
+  #page-footer ul#supporter-information {
+    float: right;
+    font-size: 1.2em;
+    margin: 0.5em 0 0;
+    padding: 0;
+    list-style: none;
+    font-weight: bold;
+    font-style: normal;
+    font-family: "IngomarJNLRegular";
+    text-transform: uppercase;
+    text-shadow: black 1px 1px 2px; }
+    #page-footer ul#supporter-information li {
+      display: inline;
+      margin-left: 0.5em; }
 
 #carousel {
   background: white;
@@ -467,32 +619,37 @@ h2#mission-statement {
   font-size: 1.8em;
   margin: 0 0 1em; }
 
-#page-footer {
-  overflow: hidden;
-  *zoom: 1;
-  padding: 0.75em 1em;
-  background: #2a2b2c url("/images/footer.jpg") center center repeat-x;
-  color: #929292; }
-  #page-footer a {
-    color: #929292;
-    text-decoration: underline; }
-    #page-footer a:hover {
-      color: white; }
-  #page-footer p#copyright-information {
-    float: left;
-    font-size: 0.8em;
-    line-height: 1.5em; }
-  #page-footer ul#supporter-information {
-    float: right;
-    font-size: 1.2em;
-    margin: 0.5em 0 0;
-    padding: 0;
-    list-style: none;
+form.formtastic fieldset.inputs {
+  border: none;
+  margin: 0;
+  padding: 48px 0 14px;
+  display: block;
+  position: relative;
+  top: 0px;
+  left: 0;
+  /* width: 100%; width: 95% */ }
+  form.formtastic fieldset.inputs legend span {
+    height: 1.4em;
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0px \9;
+    line-height: 1.4em;
     font-weight: bold;
     font-style: normal;
     font-family: "IngomarJNLRegular";
     text-transform: uppercase;
-    text-shadow: black 1px 1px 2px; }
-    #page-footer ul#supporter-information li {
-      display: inline;
-      margin-left: 0.5em; }
+    font-size: 1.3em;
+    border-bottom: 1px dotted #777777;
+    color: #ce8d22; }
+  form.formtastic fieldset.inputs ol li label {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #444444;
+    overflow: hidden;
+    *zoom: 1; }
+    form.formtastic fieldset.inputs ol li label abbr.required {
+      color: #992427;
+      float: right;
+      padding-right: 0.5em; }
