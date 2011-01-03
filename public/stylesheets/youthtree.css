@@ -430,7 +430,9 @@ ul#yt-sites {
 
 #content {
   padding: 20px;
-  background: #e9eff4; }
+  background: #e9eff4;
+  overflow: hidden;
+  *zoom: 1; }
   #content a {
     color: #36527e; }
     #content a:hover {
@@ -446,6 +448,11 @@ ul#yt-sites {
     padding: 5px;
     margin-bottom: 14px;
     color: #ce8d22; }
+    #content h1 a, #content h2 a, #content h3 a, #content h4 a, #content h5 a, #content h6 a {
+      color: #ce8d22;
+      text-decoration: none; }
+      #content h1 a:hover, #content h2 a:hover, #content h3 a:hover, #content h4 a:hover, #content h5 a:hover, #content h6 a:hover {
+        color: #a26f1b; }
   #content h1 {
     font-size: 2em; }
   #content h2 {
@@ -532,6 +539,43 @@ ul#yt-sites {
       text-decoration: none; }
       #content ul.section-links a:hover {
         color: #111111; }
+  #content aside {
+    float: left;
+    display: block;
+    width: 180px;
+    margin-right: 20px;
+    margin-top: 0.5em;
+    margin: 0.5em 20px 0 0; }
+    #content aside h2 {
+      margin-bottom: 7px; }
+    #content aside ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      #content aside ul li {
+        display: block;
+        font-size: 1.5em;
+        font-weight: bold;
+        font-style: normal;
+        font-family: "IngomarJNLRegular";
+        text-transform: uppercase;
+        line-height: 1.5em; }
+        #content aside ul li a {
+          color: #333333;
+          text-decoration: none; }
+          #content aside ul li a:hover {
+            color: black; }
+        #content aside ul li li {
+          margin: 0;
+          font-size: 1em; }
+          #content aside ul li li a {
+            color: #555555; }
+            #content aside ul li li a:hover {
+              color: #222222; }
+  #content article.with-sidebar {
+    display: block;
+    float: left;
+    width: 720px; }
 
 #page-footer {
   overflow: hidden;
@@ -596,14 +640,14 @@ ul#social-media-icons {
   ul#social-media-icons li {
     display: inline;
     display: block;
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     margin: 10px 20px 10px 0;
     float: left; }
     ul#social-media-icons li a {
       display: block;
-      width: 16px;
-      height: 16px;
+      width: 24px;
+      height: 24px;
       text-indent: -1000px; }
 
 a#vimeo-link {
@@ -653,7 +697,7 @@ form.formtastic fieldset.inputs {
     display: block;
     position: absolute;
     left: 0;
-    top: 0px \9;
+    top: 0px;
     line-height: 1.4em;
     font-weight: bold;
     font-style: normal;

@@ -5,6 +5,7 @@
 #content
   padding: 20px
   background: #e9eff4
+  +clearfix
 
   a
     +link-colors(#36527E, darken($menu-bg-colour, 10%), #777)
@@ -15,6 +16,10 @@
     padding: 5px
     margin-bottom: 14px
     color: $menu-bg-colour
+    
+    a
+      +link-colors($menu-bg-colour, darken($menu-bg-colour, 10%))
+      text-decoration: none
     
   h1
     font-size: 2em
@@ -121,3 +126,40 @@
     a
       +link-colors(#555, #111)
       text-decoration: none
+      
+  aside
+    float: left
+    display: block
+    width: 180px
+    margin-right: 20px
+    margin-top: 0.5em
+    margin: 0.5em 20px 0 0
+    
+    h2
+      margin-bottom: 7px
+    
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+      
+      li
+        display: block
+        font-size: 1.5em
+        +condensed-font
+        line-height: 1.5em
+        
+        a
+          +link-colors(#333, #000)
+          text-decoration: none
+          
+        li
+          margin: 0
+          font-size: 1em
+          a
+            +link-colors(#555, #222)
+    
+  article.with-sidebar
+    display: block
+    float: left
+    width: 720px
