@@ -9,8 +9,9 @@ The contents of this repository, where possible, are released under a
 Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
 For more information this license, please see [here](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-League Gothic is used under the SIL Open Font License 1.1 - See `SIL Open Font License 1.1.txt`
-for more information (files under `public/fonts`).
+Please note: The fonts in `public/fonts` are only licensed to Youth Tree Inc. - Using them for
+anything other than Youth Tree sites is strictly prohibited. For their applicable license, please
+see the license header in `sass/_fonts.sass`
 
 Portions of this application make use of code from [Compass](https://github.com/chriseppstein/compass) and are used under
 [Compass' modified MIT License](https://github.com/chriseppstein/compass/blob/master/LICENSE.markdown).

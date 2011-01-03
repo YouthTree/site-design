@@ -67,16 +67,35 @@ hr {
 input, select {
   vertical-align: middle; }
 
-body {
-  background: #cccccc url("/images/background.jpg") center center repeat;
-  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif; }
-
+/* Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010 Fontspring
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Jeff Levine Fonts
+ * License URL: http://www.fontspring.com/fflicense/jeff-levine
+ *
+ */
 @font-face {
   font-family: "IngomarJNLRegular";
   font-weight: bold;
   font-style: normal;
   src: url("/fonts/ingomar-webfont.eot");
   src: local("☺"), url("/fonts/ingomar-webfont.woff") format("woff"), url("/fonts/ingomar-webfont.ttf") format("truetype"), url("/fonts/ingomar-webfont.svg#webfont") format("svg"); }
+
+body {
+  background: #cccccc url("/images/background.jpg") center center repeat;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif; }
 
 form.formtastic {
   margin: 0;
