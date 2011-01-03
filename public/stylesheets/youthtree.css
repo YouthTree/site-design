@@ -94,7 +94,7 @@ input, select {
   src: local("☺"), url("/fonts/ingomar-webfont.woff") format("woff"), url("/fonts/ingomar-webfont.ttf") format("truetype"), url("/fonts/ingomar-webfont.svg#webfont") format("svg"); }
 
 body {
-  background: #cccccc url("/images/background.jpg") center center repeat;
+  background: #cccccc url("/images/youthtree/background.jpg") center center repeat;
   font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif; }
 
 form.formtastic {
@@ -324,7 +324,7 @@ ul#yt-sites {
     text-align: left; }
     #yt-subscribe-panel fieldset#yt-subscribe-button button {
       padding: 10px 30px;
-      background: #c86e05 url("/images/bg-gradient.png") bottom center repeat-x;
+      background: #c86e05 url("/images/youthtree/bg-gradient.png") bottom center repeat-x;
       font-size: 16px;
       border: 2px solid #ad5f06;
       color: white;
@@ -378,7 +378,7 @@ ul#yt-sites {
       width: 200px;
       height: 200px;
       text-indent: -10000px;
-      background: url("/images/logo.png") center center no-repeat; }
+      background: url("/images/youthtree/logo.png") center center no-repeat; }
 
 #site-navigation, #site-navigation ul {
   padding: 0;
@@ -537,7 +537,7 @@ ul#yt-sites {
   overflow: hidden;
   *zoom: 1;
   padding: 0.75em 1em;
-  background: #2a2b2c url("/images/footer.jpg") center center repeat-x;
+  background: #2a2b2c url("/images/youthtree/footer.jpg") center center repeat-x;
   color: #929292; }
   #page-footer a {
     color: #929292;
@@ -607,28 +607,28 @@ ul#social-media-icons {
       text-indent: -1000px; }
 
 a#vimeo-link {
-  background-image: url("/images/icons/vimeo.png"); }
+  background-image: url("/images/youthtree/icons/vimeo.png"); }
 
 a#twitter-link {
-  background-image: url("/images/icons/twitter.png"); }
+  background-image: url("/images/youthtree/icons/twitter.png"); }
 
 a#linkedin-link {
-  background-image: url("/images/icons/linkedin.png"); }
+  background-image: url("/images/youthtree/icons/linkedin.png"); }
 
 a#facebook-link {
-  background-image: url("/images/icons/facebook.png"); }
+  background-image: url("/images/youthtree/icons/facebook.png"); }
 
 a#youtube-link {
-  background-image: url("/images/icons/youtube.png"); }
+  background-image: url("/images/youthtree/icons/youtube.png"); }
 
 a#flickr-link {
-  background-image: url("/images/icons/flickr.png"); }
+  background-image: url("/images/youthtree/icons/flickr.png"); }
 
 a#feed-link {
-  background-image: url("/images/icons/feed.png"); }
+  background-image: url("/images/youthtree/icons/feed.png"); }
 
 a#email-link {
-  background-image: url("/images/icons/email.png"); }
+  background-image: url("/images/youthtree/icons/email.png"); }
 
 h2#mission-statement {
   text-align: center;
