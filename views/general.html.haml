@@ -5,6 +5,8 @@
     %li
       %a{:href => "#"} What We Do
       %ul
+        %li.current
+          %a{:href => "#"} Test Item
         = ml "Taking over the world"
         = ml "Helping People"
         = ml "Being Awesome"
@@ -90,7 +92,9 @@
     %li Another, Slightly Longer list item that talks about something random.
     %li Another, Slightly Longer list item that talks about something random.
   
-  %h3 Also, a basic definition list
+  %h3
+    Also, a basic
+    %a{:href => '#'} definition list
 
   %dl
     %dt Definition Title

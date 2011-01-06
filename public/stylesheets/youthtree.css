@@ -449,10 +449,10 @@ ul#yt-sites {
     margin-bottom: 14px;
     color: black; }
     #content h1 a, #content h2 a, #content h3 a, #content h4 a, #content h5 a, #content h6 a {
-      color: #ce8d22;
+      color: #4c3414;
       text-decoration: none; }
       #content h1 a:hover, #content h2 a:hover, #content h3 a:hover, #content h4 a:hover, #content h5 a:hover, #content h6 a:hover {
-        color: #a26f1b; }
+        color: #ce8d22; }
   #content h1 {
     font-size: 2.25em; }
   #content h2 {
@@ -560,6 +560,12 @@ ul#yt-sites {
         font-family: "IngomarJNLRegular";
         text-transform: uppercase;
         line-height: 1.5em; }
+        #content aside ul li.current > a:before {
+          content: "» ";
+          color: #ce8d22;
+          font-weight: bold;
+          font-family: Verdana, Arial, Helvetica, Sans-Serif;
+          font-size: 0.8em; }
         #content aside ul li a {
           color: #333333;
           text-decoration: none; }
@@ -567,7 +573,8 @@ ul#yt-sites {
             color: black; }
         #content aside ul li li {
           margin: 0;
-          font-size: 1em; }
+          font-size: 1em;
+          padding-left: 0.5em; }
           #content aside ul li li a {
             color: #555555; }
             #content aside ul li li a:hover {
@@ -691,8 +698,8 @@ form.formtastic fieldset.inputs legend {
     font-style: normal;
     font-family: "IngomarJNLRegular";
     text-transform: uppercase;
-    font-size: 1.3em;
-    color: #ce8d22;
+    font-size: 1.5em;
+    color: black;
     padding: 0 0 0.5em; }
 form.formtastic fieldset.inputs ol li label {
   font-size: 0.9em;

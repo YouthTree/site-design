@@ -18,7 +18,7 @@
     color: #000
     
     a
-      +link-colors($menu-bg-colour, darken($menu-bg-colour, 10%))
+      +link-colors(#4C3414, $menu-bg-colour)
       text-decoration: none
     
   h1
@@ -149,6 +149,13 @@
         +condensed-font
         line-height: 1.5em
         
+        &.current > a:before
+          content: "» "
+          color: #ce8d22
+          font-weight: bold
+          font-family: Verdana, Arial, Helvetica, Sans-Serif
+          font-size: 0.8em
+        
         a
           +link-colors(#333, #000)
           text-decoration: none
@@ -156,6 +163,7 @@
         li
           margin: 0
           font-size: 1em
+          padding-left: 0.5em
           a
             +link-colors(#555, #222)
     
