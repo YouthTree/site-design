@@ -447,24 +447,24 @@ ul#yt-sites {
     border-bottom: 1px dotted #777777;
     padding: 5px;
     margin-bottom: 14px;
-    color: #ce8d22; }
+    color: black; }
     #content h1 a, #content h2 a, #content h3 a, #content h4 a, #content h5 a, #content h6 a {
       color: #ce8d22;
       text-decoration: none; }
       #content h1 a:hover, #content h2 a:hover, #content h3 a:hover, #content h4 a:hover, #content h5 a:hover, #content h6 a:hover {
         color: #a26f1b; }
   #content h1 {
-    font-size: 2em; }
+    font-size: 2.25em; }
   #content h2 {
-    font-size: 1.5em; }
+    font-size: 1.75em; }
   #content h3 {
-    font-size: 1.25em; }
+    font-size: 1.5em; }
   #content h4 {
-    font-size: 1.2em; }
+    font-size: 1.35em; }
   #content h5 {
-    font-size: 1.1em; }
+    font-size: 1.25em; }
   #content h6 {
-    font-size: 1em; }
+    font-size: 1.2em; }
   #content p {
     line-height: 1.35em;
     font-size: 0.9em;
@@ -685,7 +685,7 @@ h2#mission-statement {
 form.formtastic fieldset.inputs legend {
   padding-bottom: 0.5em; }
   form.formtastic fieldset.inputs legend span {
-    height: 1.4em;
+    height: 1.5em;
     line-height: 1.4em;
     font-weight: bold;
     font-style: normal;
