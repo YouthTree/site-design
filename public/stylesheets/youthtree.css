@@ -362,7 +362,7 @@ ul#yt-sites {
 
 #page-header {
   *zoom: 1;
-  margin: 0 0 0.5em; }
+  margin: 0 0 0; }
   #page-header:after {
     content: "\0020";
     display: block;
@@ -375,8 +375,8 @@ ul#yt-sites {
     #page-header h1 a {
       display: block;
       margin: 0;
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 225px;
       text-indent: -10000px;
       background: url("/images/youthtree/logo.png") center center no-repeat; }
 
@@ -682,37 +682,24 @@ h2#mission-statement {
   font-size: 1.8em;
   margin: 0 0 1em; }
 
-form.formtastic fieldset.inputs {
-  border: none;
-  margin: 0;
-  padding: 48px 0 14px;
-  display: block;
-  position: relative;
-  top: 0px;
-  left: 0;
-  /* width: 100%; width: 95% */ }
+form.formtastic fieldset.inputs legend {
+  padding-bottom: 0.5em; }
   form.formtastic fieldset.inputs legend span {
     height: 1.4em;
-    width: 100%;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0px;
     line-height: 1.4em;
     font-weight: bold;
     font-style: normal;
     font-family: "IngomarJNLRegular";
     text-transform: uppercase;
     font-size: 1.3em;
-    border-bottom: 1px dotted #777777;
-    color: #ce8d22; }
-  form.formtastic fieldset.inputs ol li label {
-    font-size: 0.9em;
-    font-weight: bold;
-    color: #444444;
-    overflow: hidden;
-    *zoom: 1; }
-    form.formtastic fieldset.inputs ol li label abbr.required {
-      color: #992427;
-      float: right;
-      padding-right: 0.5em; }
+    color: #ce8d22;
+    padding: 0 0 0.5em; }
+form.formtastic fieldset.inputs ol li label {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #444444;
+  overflow: hidden;
+  *zoom: 1; }
+  form.formtastic fieldset.inputs ol li label abbr.required {
+    color: #992427;
+    padding-left: 0.5em; }
