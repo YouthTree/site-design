@@ -640,8 +640,6 @@ ul#yt-sites {
       width: 895px;
       height: 350px;
       display: none; }
-      #carousel ul li:first-child {
-        display: block; }
 
 ul#social-media-icons {
   overflow: hidden;
