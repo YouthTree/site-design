@@ -26,8 +26,8 @@ Sass::Plugin.options[:template_location] = { 'sass' => 'public/stylesheets' }
 use Rack::ShowStatus      # Nice looking 404s and other messages
 use Rack::ShowExceptions  # Nice looking errors
 use Sass::Plugin::Rack    # Compile Sass on the fly
-use Barista::Filter
-use Barista::Server::Proxy
+# use Barista::Filter
+# use Barista::Server::Proxy
 
 # Rack Application
 if ENV['SERVER_SOFTWARE'] =~ /passenger/i
