@@ -11,7 +11,7 @@
     %link{:rel => 'stylesheet', :href => '/stylesheets/youthtree.css'}
   %body
     = render 'network'
+    %header#page-header= render 'header'
     #container
-      %header#page-header= render 'header'
       %section#content= yield
       %footer#page-footer= render 'footer'
