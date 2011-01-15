@@ -88,7 +88,7 @@ input, select {
  */
 @font-face {
   font-family: "IngomarJNLRegular";
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   src: url("/fonts/ingomar-webfont.eot");
   src: local("☺"), url("/fonts/ingomar-webfont.woff") format("woff"), url("/fonts/ingomar-webfont.ttf") format("truetype"), url("/fonts/ingomar-webfont.svg#webfont") format("svg"); }
@@ -144,7 +144,8 @@ form.formtastic {
       overflow: auto; }
       form.formtastic fieldset > ol > li label {
         display: block;
-        width: 25%;
+        width: 23%;
+        padding-right: 2%;
         float: left;
         padding-top: 0.2em; }
       form.formtastic fieldset > ol > li > li label {
@@ -395,7 +396,7 @@ ul#yt-sites {
     z-index: 50; }
   #site-navigation a {
     display: block;
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
     font-family: "IngomarJNLRegular";
     text-transform: uppercase;
@@ -440,7 +441,7 @@ ul#yt-sites {
     #content a:active {
       color: #777777; }
   #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
     font-family: "IngomarJNLRegular";
     text-transform: uppercase;
@@ -500,10 +501,11 @@ ul#yt-sites {
       padding: 1em 0; }
   #content ul, #content ol, #content dl {
     font-size: 0.9em;
-    line-height: 1.5em;
+    line-height: 1.8em;
     margin: 0 0 14px; }
   #content ul, #content ol {
-    list-style-position: inside; }
+    list-style-position: outside;
+    margin-left: 1.25em; }
   #content dl dt {
     font-weight: bold;
     margin-top: 8px;
@@ -519,9 +521,9 @@ ul#yt-sites {
     float: left;
     width: 215px;
     margin: 0 10px; }
-    #content .subsection:first-child {
+    #content .subsection.first {
       margin-left: 0; }
-    #content .subsection:last-child {
+    #content .subsection.last {
       margin-right: 0; }
     #content .subsection h3 {
       font-size: 1.5em;
@@ -555,7 +557,7 @@ ul#yt-sites {
       #content aside ul li {
         display: block;
         font-size: 1.5em;
-        font-weight: bold;
+        font-weight: normal;
         font-style: normal;
         font-family: "IngomarJNLRegular";
         text-transform: uppercase;
@@ -605,7 +607,7 @@ ul#yt-sites {
     margin: 0.5em 0 0;
     padding: 0;
     list-style: none;
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
     font-family: "IngomarJNLRegular";
     text-transform: uppercase;
@@ -694,7 +696,7 @@ form.formtastic fieldset.inputs legend {
   form.formtastic fieldset.inputs legend span {
     height: 1.5em;
     line-height: 1.4em;
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
     font-family: "IngomarJNLRegular";
     text-transform: uppercase;
