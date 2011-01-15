@@ -4,6 +4,7 @@ YouthTree.withNS 'IE6', (ns) ->
     "#page-header h1 a"
     "ul#social-media-icons li a"
     "#yt-subscribe-button button"
+    "#flash-messages p.flash"
   ]
   
   ns.setup = ->
