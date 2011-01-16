@@ -13,5 +13,9 @@
     = render 'network'
     %header#page-header= render 'header'
     #container
-      %section#content= yield
-      %footer#page-footer= render 'footer'
+      - if request.path =~ /welcome/
+        %section#welcome= yield
+        %footer#welcome-footer= render 'footer'
+      - else
+        %section#content= yield
+        %footer#page-footer= render 'footer'

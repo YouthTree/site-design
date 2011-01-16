@@ -369,3 +369,13 @@ $font-suffix: "-webfont"
   input, select
     vertical-align: middle
   
+  
+=inline-block($width, $height)
+  width: $width
+  min-height: $height
+  display: -moz-inline-stack
+  display: inline-block
+  vertical-align: top
+  zoom: 1
+  *display: inline
+  _height: $height

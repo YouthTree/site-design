@@ -252,7 +252,7 @@ form.formtastic fieldset ol li.date fieldset ol li, form.formtastic fieldset ol 
 
 #yt-subscribe {
   float: left;
-  background: #c4771b;
+  background: #de8721;
   -moz-border-radius-bottomleft: 15px;
   -webkit-border-bottom-left-radius: 15px;
   -o-border-bottom-left-radius: 15px;
@@ -604,18 +604,13 @@ ul#yt-sites {
     float: left;
     width: 720px; }
 
-#page-footer {
+#page-footer, #welcome-footer {
   overflow: hidden;
   *zoom: 1;
-  padding: 0.75em 1em;
-  background: #2a2b2c url("/images/youthtree/footer.jpg") center center repeat-x;
-  color: #929292; }
-  #page-footer a {
-    color: #929292;
+  padding: 0.75em 1em; }
+  #page-footer a, #welcome-footer a {
     text-decoration: underline; }
-    #page-footer a:hover {
-      color: white; }
-  #page-footer ul#supporter-information {
+  #page-footer ul#supporter-information, #welcome-footer ul#supporter-information {
     font-size: 1.2em;
     margin: 0.5em auto 0.5em;
     padding: 0;
@@ -624,21 +619,61 @@ ul#yt-sites {
     font-style: normal;
     font-family: "IngomarJNLRegular";
     text-transform: uppercase;
-    text-shadow: black 1px 1px 2px;
     text-align: center; }
-    #page-footer ul#supporter-information li {
+    #page-footer ul#supporter-information li, #welcome-footer ul#supporter-information li {
       display: inline;
       margin: 0 0.5em; }
+
+#page-footer {
+  background: #2a2b2c url("/images/youthtree/footer.jpg") center center repeat-x;
+  color: #929292; }
+  #page-footer ul#supporter-inline {
+    text-shadow: black 1px 1px 2px; }
+  #page-footer a {
+    color: #929292; }
+    #page-footer a:hover {
+      color: white; }
+
+#welcome-footer ul#supporter-information {
+  text-shadow: #666666 1px 1px 3px; }
+#welcome-footer a {
+  color: #333333; }
+  #welcome-footer a:hover {
+    color: #58300b; }
+
+#introduction p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  text-align: center;
+  margin: 1em 2em 0.5em; }
 
 #carousel {
   background: white;
   border: 1px dotted #777777;
   padding: 10px;
   text-align: center;
-  z-index: 5; }
+  z-index: 5;
+  position: relative; }
+  #carousel .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 10; }
+    #carousel .overlay a {
+      display: block;
+      background: transparent url("/images/youthtree/carousel-overlay.png") center center no-repeat;
+      width: 915px;
+      height: 350px;
+      z-index: 10;
+      font-size: 2em;
+      text-indent: -999em;
+      color: white;
+      font-weight: bold;
+      text-decoration: none; }
   #carousel ul {
     display: block;
-    width: 895px;
+    width: 100%;
     height: 350px;
     margin: 0 auto;
     list-style: none;
@@ -649,29 +684,34 @@ ul#yt-sites {
       left: 0;
       margin: 0;
       padding: 0;
-      width: 895px;
+      width: 100%;
       height: 350px;
-      display: none; }
+      display: none;
+      background: green; }
 
-ul#social-media-icons {
+#homepage-details {
   overflow: hidden;
   *zoom: 1;
+  padding: 0.5em 1em; }
+
+ul#social-media-icons {
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 150px; }
+  float: right; }
   ul#social-media-icons li {
     display: inline;
-    display: block;
-    width: 24px;
-    height: 24px;
-    margin: 10px 20px 10px 0;
-    float: left; }
+    margin: 0 0 0 8px; }
     ul#social-media-icons li a {
-      display: block;
       width: 24px;
-      height: 24px;
-      text-indent: -1000px; }
+      min-height: 24px;
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: top;
+      zoom: 1;
+      *display: inline;
+      _height: 24px;
+      text-indent: -9999em; }
 
 a#vimeo-link {
   background-image: url("/images/youthtree/icons/vimeo.png"); }
