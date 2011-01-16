@@ -641,6 +641,27 @@ ul#yt-sites {
   #welcome-footer a:hover {
     color: #58300b; }
 
+nav#footer-navigation {
+  font-size: 1.2em;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "IngomarJNLRegular";
+  text-transform: uppercase; }
+  nav#footer-navigation ul {
+    list-style: none;
+    margin: 1em 0 0.5em;
+    padding: 0;
+    text-align: center; }
+    nav#footer-navigation ul li {
+      display: inline;
+      margin: 0 0.75em; }
+      nav#footer-navigation ul li a {
+        color: #222222;
+        text-decoration: none;
+        text-shadow: #666666 1px 1px 3px; }
+        nav#footer-navigation ul li a:hover {
+          color: #58300b; }
+
 #introduction p {
   font-size: 1.2em;
   line-height: 1.5em;
@@ -686,8 +707,7 @@ ul#yt-sites {
       padding: 0;
       width: 100%;
       height: 350px;
-      display: none;
-      background: green; }
+      display: none; }
 
 #homepage-details {
   overflow: hidden;
@@ -698,19 +718,17 @@ ul#social-media-icons {
   margin: 0;
   padding: 0;
   list-style: none;
-  float: right; }
+  overflow: hidden;
+  *zoom: 1;
+  display: block; }
   ul#social-media-icons li {
-    display: inline;
+    display: block;
+    float: right;
     margin: 0 0 0 8px; }
     ul#social-media-icons li a {
+      display: block;
       width: 24px;
-      min-height: 24px;
-      display: -moz-inline-stack;
-      display: inline-block;
-      vertical-align: top;
-      zoom: 1;
-      *display: inline;
-      _height: 24px;
+      height: 24px;
       text-indent: -9999em; }
 
 a#vimeo-link {

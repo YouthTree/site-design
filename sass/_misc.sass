@@ -48,7 +48,6 @@
       width: 100%
       height: 350px
       display: none
-      background: green
 
 #homepage-details
   +clearfix
@@ -58,12 +57,16 @@ ul#social-media-icons
   margin: 0
   padding: 0
   list-style: none
-  float: right
+  +clearfix
+  display: block
   li
-    display: inline
+    display: block
+    float: right
     margin: 0 0 0 8px
     a
-      +inline-block(24px, 24px)
+      display: block
+      width: 24px
+      height: 24px
       text-indent: -9999em  
       
 a#vimeo-link
