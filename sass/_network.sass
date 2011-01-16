@@ -14,11 +14,12 @@
   
 #yt-subscribe
   float: left
-  background: #DE8721
+  background: #222
   +border-bottom-radius(15px)
   a
     padding: 0 20px
-    +link-colors(#000, #FFF)
+    +link-colors($menu-bg-colour, lighten($menu-bg-colour, 5%))
+    font-weight: bold
   
   &.active
     background: #1e1e1e
@@ -28,7 +29,7 @@
 #yt-subscribe, ul#yt-sites
   font-size: 12px
   line-height: 18px
-  padding: 10px
+  padding: 7px 10px
 
 ul#yt-sites
   float: right
@@ -97,7 +98,7 @@ ul#yt-sites
       font-size: 16px
       border: 2px solid #AD5F06
       color: #FFF
-      +border-radius(8px)
+      +border-radius(4px)
       text-shadow: #000 1px 1px 2px
       font-weight: bold
       +box-shadow(#000, 1px, 1px, 5px)

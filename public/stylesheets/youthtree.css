@@ -252,7 +252,7 @@ form.formtastic fieldset ol li.date fieldset ol li, form.formtastic fieldset ol 
 
 #yt-subscribe {
   float: left;
-  background: #de8721;
+  background: #222222;
   -moz-border-radius-bottomleft: 15px;
   -webkit-border-bottom-left-radius: 15px;
   -o-border-bottom-left-radius: 15px;
@@ -267,9 +267,10 @@ form.formtastic fieldset ol li.date fieldset ol li, form.formtastic fieldset ol 
   border-bottom-right-radius: 15px; }
   #yt-subscribe a {
     padding: 0 20px;
-    color: black; }
+    color: #ce8d22;
+    font-weight: bold; }
     #yt-subscribe a:hover {
-      color: white; }
+      color: #dc9a2d; }
   #yt-subscribe.active {
     background: #1e1e1e; }
     #yt-subscribe.active a {
@@ -278,7 +279,7 @@ form.formtastic fieldset ol li.date fieldset ol li, form.formtastic fieldset ol 
 #yt-subscribe, ul#yt-sites {
   font-size: 12px;
   line-height: 18px;
-  padding: 10px; }
+  padding: 7px 10px; }
 
 ul#yt-sites {
   float: right;
@@ -341,12 +342,12 @@ ul#yt-sites {
       font-size: 16px;
       border: 2px solid #ad5f06;
       color: white;
-      -moz-border-radius: 8px;
-      -webkit-border-radius: 8px;
-      -o-border-radius: 8px;
-      -ms-border-radius: 8px;
-      -khtml-border-radius: 8px;
-      border-radius: 8px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -o-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -khtml-border-radius: 4px;
+      border-radius: 4px;
       text-shadow: black 1px 1px 2px;
       font-weight: bold;
       -moz-box-shadow: black 1px 1px 5px false;
