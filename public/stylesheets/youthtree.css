@@ -445,7 +445,7 @@ ul#yt-sites {
 
 #container {
   width: 960px;
-  margin: 0 auto 3em; }
+  margin: 0 auto 0.5em; }
 
 #content {
   width: 920px;
@@ -525,6 +525,8 @@ ul#yt-sites {
   #content ul, #content ol {
     list-style-position: outside;
     margin-left: 1.25em; }
+    #content ul ul li, #content ul ol li, #content ol ul li, #content ol ol li {
+      font-size: 1.1em; }
   #content dl dt {
     font-weight: bold;
     margin-top: 8px;
@@ -627,7 +629,8 @@ ul#yt-sites {
 
 #page-footer {
   background: #2a2b2c url("/images/youthtree/footer.jpg") center center repeat-x;
-  color: #929292; }
+  color: #929292;
+  margin-bottom: 3em; }
   #page-footer ul#supporter-inline {
     text-shadow: black 1px 1px 2px; }
   #page-footer a {
@@ -641,27 +644,6 @@ ul#yt-sites {
   color: #333333; }
   #welcome-footer a:hover {
     color: #58300b; }
-
-nav#footer-navigation {
-  font-size: 1.2em;
-  font-weight: normal;
-  font-style: normal;
-  font-family: "IngomarJNLRegular";
-  text-transform: uppercase; }
-  nav#footer-navigation ul {
-    list-style: none;
-    margin: 1em 0 0.5em;
-    padding: 0;
-    text-align: center; }
-    nav#footer-navigation ul li {
-      display: inline;
-      margin: 0 0.75em; }
-      nav#footer-navigation ul li a {
-        color: #222222;
-        text-decoration: none;
-        text-shadow: #666666 1px 1px 3px; }
-        nav#footer-navigation ul li a:hover {
-          color: #58300b; }
 
 #introduction p {
   font-size: 1.2em;
