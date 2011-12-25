@@ -1,18 +1,18 @@
 #container
   width: 960px
-  margin: 0 auto 0.5em
+  margin: 0 auto 20px
 
 #content
   width: 920px
   padding: 20px
-  background: #e9eff4
+  background: #fff
   +clearfix
 
   a
     +link-colors(#36527E, darken($menu-bg-colour, 10%), #777)
 
   h1, h2, h3, h4, h5, h6
-    +condensed-font
+    font-family: 'ArcherBold', sans-serif
     border-bottom: 1px dotted #777
     padding: 5px
     margin-bottom: 14px
@@ -21,9 +21,12 @@
     a
       +link-colors(#4C3414, $menu-bg-colour)
       text-decoration: none
+	  
+  article h1
+    color: #3A8100
     
   h1
-    font-size: 2.25em
+    font-size: 2.0em
   
   h2
     font-size: 1.75em
@@ -138,11 +141,14 @@
     display: block
     width: 180px
     margin-right: 20px
-    margin-top: 0.5em
-    margin: 0.5em 20px 0 0
+    margin-top: 0.45em
+    margin: 0.25em 20px 0 0
     
     h2
       margin-bottom: 7px
+      font-family: 'DINBold', sans-serif
+      text-transform: uppercase
+      font-size: 18pt
     
     ul
       list-style: none
@@ -152,15 +158,9 @@
       li
         display: block
         font-size: 1.5em
-        +condensed-font
         line-height: 1.5em
-        
-        &.current > a:before
-          content: "» "
-          color: #ce8d22
-          font-weight: bold
-          font-family: Verdana, Arial, Helvetica, Sans-Serif
-          font-size: 0.8em
+        font-family: 'DINBold', sans-serif
+        font-size: 16pt
         
         a
           +link-colors(#333, #000)
@@ -168,7 +168,6 @@
           
         li
           margin: 0
-          font-size: 1em
           padding-left: 0.5em
           a
             +link-colors(#555, #222)

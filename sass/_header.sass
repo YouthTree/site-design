@@ -6,11 +6,11 @@
     float: left
     a
       display: block
-      margin: 0
-      width: 250px
-      height: 190px
+      margin: 0 0 10px 50px
+      width: 160px
+      height: 170px
       text-indent: -10000px
-      background: url('/images/youthtree/logo.png') center center no-repeat
+      background: url('/images/useful/logo.png') center center no-repeat
     
 #site-navigation, #site-navigation ul
   padding: 0
@@ -24,40 +24,23 @@
   margin: 0 50px 0 0
 
   ul
-    font-size: 2.5em
+    font-size: 19pt
     z-index: 50
 
   a
     display: block
-    +condensed-font
+    font-family: 'DINMedium', Sans-Serif
+    text-transform: uppercase
+    letter-spacing: 1.5px
     +link-colors(#000)
     text-decoration: none
-    padding: 0.25em 0.5em
-    text-shadow: #FFF 1px 1px 1px
-
   li
     float: right
     cursor: pointer
     margin: 0
-    ul
-      font-size: 0.75em
-      position: absolute
-      left: -999em
-      background: $menu-bg-colour
-
-      li
-        float: none
+    padding: 2.5em 0.5em 0.25em 0.75em
 
     &:hover, &.sfhover
       cursor: pointer
       a
-        background: $menu-bg-colour
-        +link-colors(#FFF)
-        text-shadow: #000 1px 1px 1px
-      ul
-        left: auto
-        li
-          height: 1.5em
-        li:hover, li.sfhover
-          a
-            background: darken($menu-bg-colour, 25%)
+        +link-colors(#444)
